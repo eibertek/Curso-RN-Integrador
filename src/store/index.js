@@ -17,12 +17,13 @@ const persistConfig = {
 const pReducer = persistReducer(persistConfig, rootReducer);
 
 
-const configureStore = () => {
+const configureStore = (dev) => {
   return createStore(
     pReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     );
 }
+
 export const store = configureStore();
 export const persistor = persistStore(store);
 persistor.purge();
