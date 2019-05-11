@@ -1,6 +1,6 @@
 import LoginForm from './LoginForm';
 import { connect } from 'react-redux';
-import { newUser } from './redux/actions';
+import { newUser, casaCall } from './redux/actions';
 
 const mapStateToProps = state => ({
     user: state.login.user,
@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
     newUser,
+    casaCall,
 };
 
 export const ConnectedForm = connect(mapStateToProps, mapDispatchToProps)(LoginForm); 

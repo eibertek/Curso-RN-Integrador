@@ -16,11 +16,14 @@ export const LoginForm = props => {
                <Input  placeholder="Password" />
                <View styles={styles.buttonContainer}>
                  <Button buttonStyle={styles.buttonStyle} title="Login" 
-                 onPress={() => props.newUser({
-                     name:'asasa', 
-                     email:'',
-                     password:'',
-                 })} />
+                 onPress={() => {
+                    props.newUser({
+                        name:'asasa', 
+                        email:'',
+                        password:'',
+                    })
+                    props.casaCall()
+                 }} />
                 </View> 
             </Card>
         </View>

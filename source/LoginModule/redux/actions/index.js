@@ -9,3 +9,12 @@ export const newUser = (user) => {
         user,
     }
 }
+
+/**
+ * user = { name, email, password }
+ */
+export const casaCall = (user) => {
+    return {
+        type:'CASA',
+    }
+}

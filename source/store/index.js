@@ -4,8 +4,13 @@ import { persistStore, persistReducer } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import loginReducer from '../LoginModule/redux/reducers';
 
+const casaReducer = (state={ casa:''}, action) => {
+  if(action.type==='CASA') return { ...state, casa:"AAAAAAAA" };
+  return state;
+}
 const rootReducer = combineReducers({
-    login: loginReducer
+    login: loginReducer,
+    casa: casaReducer,
   });
 
   const customMiddleware = store => (next, ...otherparams) => action => {
@@ -24,9 +29,10 @@ const rootReducer = combineReducers({
   ); 
 
 const persistConfig = {
-  key: 'login',
+  key: 'root',
   storage: AsyncStorage,
-  stateReconciler: autoMergeLevel2 // see "Merge Process" section for details.
+  stateReconciler: autoMergeLevel2, // see "Merge Process" section for details.
+  whitelist: ['login'] 
 };
   
 const pReducer = persistReducer(persistConfig, rootReducer);
