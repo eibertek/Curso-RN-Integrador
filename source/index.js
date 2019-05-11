@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import LoginModule from "./LoginModule";
+import { ConnectedForm as LoginModule} from "./LoginModule";
 import { Provider } from 'react-redux';
 import { store } from './store';
 
