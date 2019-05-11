@@ -11,10 +11,10 @@ export const LoginForm = props => {
                <Input placeholder="Usuario" />
                <Input  placeholder="Mail" />
                <Input  placeholder="Password" />
+               <View styles={styles.buttonContainer}>
+                 <Button buttonStyle={styles.buttonStyle} title="Login" onPress={()=>{}} />
+                </View> 
             </Card>
-           <View styles={styles.buttonContainer}>
-             <Button buttonStyle={styles.buttonStyle} title="Login" onPress={()=>{}} />
-            </View> 
         </View>
     );
 }
