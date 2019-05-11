@@ -1,4 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import AsyncStorage from '@react-native-community/async-storage'
+import { persistStore, persistReducer } from 'redux-persist';
+import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import loginReducer from '../LoginModule/redux/reducers';
 
 const rootReducer = combineReducers({
@@ -19,7 +22,18 @@ const rootReducer = combineReducers({
     window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
     applyMiddleware(customMiddleware),
   ); 
+
+const persistConfig = {
+  key: 'login',
+  storage: AsyncStorage,
+  stateReconciler: autoMergeLevel2 // see "Merge Process" section for details.
+};
   
-export const store = createStore(rootReducer,
+const pReducer = persistReducer(persistConfig, rootReducer);
+
+export const store = createStore(pReducer,
     middlewares,
     )
+
+export const persistor = persistStore(store);
+// persistor.purge();

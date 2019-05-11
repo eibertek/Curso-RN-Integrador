@@ -8,6 +8,7 @@
     "android": "react-native run-android"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.4.0",
     "react": "16.8.3",
     "react-native": "0.59.5",
     "react-native-elements": "^1.1.0",
@@ -21,7 +22,8 @@
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.0",
     "react-test-renderer": "16.8.3",
-    "react-native-vector-icons": "^6.4.2"
+    "react-native-vector-icons": "^6.4.2",
+    "redux-persist": "^5.10.0"
   },
   "jest": {
     "preset": "react-native"

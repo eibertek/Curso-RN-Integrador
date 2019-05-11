@@ -1,24 +1,16 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
+import { PersistGate } from 'redux-persist/lib/integration/react';
 import { ConnectedForm as LoginModule} from "./LoginModule";
 import { Provider } from 'react-redux';
-import { store } from './store';
+import { store, persistor } from './store';
 
-
-store.dispatch({
-    type: 'NUEVO USUARIO',
-    info:{ 
-      man:'asasas',
-      age:20,
-    }
-  });
   
 export const App = props => (
     <Provider store={store}>
-        <View>
-            <Text>AAAA</Text>
+        <PersistGate persistor={persistor} loading={()=> null}>
             <LoginModule />
-        </View>
+        </PersistGate>
     </Provider>
 );
 
