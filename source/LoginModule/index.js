@@ -11,6 +11,8 @@ const mapDispatchToProps = {
     casaCall,
 };
 
-export const ConnectedForm = connect(mapStateToProps, mapDispatchToProps)(LoginForm); 
+export const ConnectedForm = connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+
+export const SignUpForm = LoginForm;
 
 export default LoginForm;

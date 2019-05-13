@@ -21,10 +21,10 @@ export const LoginForm = props => {
                             email: '',
                             password: '',
                         })
-                        this.props.navigation.navigate('SiguientePagina')
+                        props.navigation.navigate('signUp')
                     }} />
             </View>
-            {props.user.name && <View><Text>{props.user.name} Logueado</Text></View>}
+            {props.user && props.user.name && <View><Text>{props.user.name} Logueado</Text></View>}
         </View>
     );
 }
