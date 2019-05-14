@@ -8,11 +8,15 @@
     "android": "react-native run-android"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/react-native-fontawesome": "^0.1.0",
     "@react-native-community/async-storage": "^1.4.0",
     "react": "16.8.3",
     "react-native": "0.59.5",
     "react-native-elements": "^1.1.0",
     "react-native-gesture-handler": "^1.2.1",
+    "react-native-svg": "^9.4.0",
     "react-navigation": "^3.9.1",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1"

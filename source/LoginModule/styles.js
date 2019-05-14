@@ -10,6 +10,9 @@ export const styles = StyleSheet.create({
         width: '100%',
     },
     buttonStyle: {
-        width: 100,
+        width: 60,
+        height:60,
+        borderRadius:30,
+        position:'absolute', zIndex:999,
     },
 });

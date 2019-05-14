@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="386" height="469" viewBox="0 0 386 469">
+  <defs>
+    <filter id="Union_3" x="0" y="0" width="386" height="469" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Symbol_3_1" data-name="Symbol 3 – 1" transform="translate(5 -185)">
+    <g transform="matrix(1, 0, 0, 1, -5, 185)" filter="url(#Union_3)">
+      <path id="Union_3-2" data-name="Union 3" d="M-1710-480a36.164,36.164,0,0,1,.68-7H-1827a10,10,0,0,1-10-10V-843a10,10,0,0,1,10-10h306a10,10,0,0,1,10,10v346a10,10,0,0,1-10,10h-117.68a36.173,36.173,0,0,1,.68,7,36,36,0,0,1-36,36A36,36,0,0,1-1710-480Z" transform="translate(1867 880)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
