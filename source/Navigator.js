@@ -1,12 +1,12 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import { ConnectedForm as LoginModule, SignUpForm } from "./LoginModule";
+import Dashboard from "./DashboardModule";
+// import { ConnectedForm as LoginModule, SignUpForm } from "./LoginModule";
 
 
 const AppNavigator = createStackNavigator({
-    login: LoginModule,
-    signUp: SignUpForm,
+    dashboard: Dashboard,
 }, {
-        initialRouteName: "login"
+        initialRouteName: "dashboard"
     });
 
 export default createAppContainer(AppNavigator);
