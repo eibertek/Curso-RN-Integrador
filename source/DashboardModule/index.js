@@ -1,14 +1,18 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
 import StatusPlayer from './StatusPlayer/StatusPlayer';
+import News from './NewsModule/NewsModule';
 
-const Dashboard = () => {
-  return (
-    <View>
+
+
+export default class componentName extends Component {
+  render() {
+    return (
+      <View>
       <Text>Dashboard</Text>
       <StatusPlayer />
+      <News />
     </View>
-  )
+    )
+  }
 }
-
-export default Dashboard
