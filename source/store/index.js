@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import AsyncStorage from '@react-native-community/async-storage'
 import { persistStore, persistReducer } from 'redux-persist';
+import thunk from 'redux-thunk';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import loginReducer from '../LoginModule/redux/reducers';
 
@@ -22,10 +23,25 @@ const rootReducer = combineReducers({
     next(action);
    }
 
+   let composeEnhancers = compose;
+
+if (__DEV__) {
+  composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ || compose;
+}
+/*
+const configureStore = () => {
+  return createStore(
+    rootReducer,
+    applyMiddleware(thunk)
+    // composeEnhancers(applyMiddleware(thunk))
+  );
+};
+*/
   const middlewares = compose(
     window.__REDUX_DEVTOOLS_EXTENSION__ ?
     window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
-    applyMiddleware(customMiddleware),
+    applyMiddleware(thunk),    
+    applyMiddleware(customMiddleware),    
   ); 
 
 const persistConfig = {
