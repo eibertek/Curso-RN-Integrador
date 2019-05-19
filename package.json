@@ -4,11 +4,25 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "android": "react-native run-android"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/react-native-fontawesome": "^0.1.0",
+    "@react-native-community/async-storage": "^1.4.0",
+    "axios": "^0.18.0",
     "react": "16.8.3",
-    "react-native": "0.59.5"
+    "react-native": "0.59.5",
+    "react-native-elements": "^1.1.0",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-safe-area-view": "^0.14.1",
+    "react-native-svg": "^9.4.0",
+    "react-navigation": "^3.9.1",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -16,7 +30,10 @@
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.0",
-    "react-test-renderer": "16.8.3"
+    "react-native-svg-transformer": "^0.13.0",
+    "react-native-vector-icons": "^6.4.2",
+    "react-test-renderer": "16.8.3",
+    "redux-persist": "^5.10.0"
   },
   "jest": {
     "preset": "react-native"
