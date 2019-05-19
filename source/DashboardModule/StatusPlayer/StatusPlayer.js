@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
-import { View, Text, Button, ScrollView } from 'react-native'
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { View, Text, Button, ScrollView } from 'react-native';
 import { Slider } from 'react-native-elements';
+import { throwDices } from '../redux/actions';
 
 const StatusPlayer = props => {
   const [sliderState, setSlider ] = useState(50);
+
   return (
     <View>
       <Text>{props.playerName}</Text>
@@ -13,14 +16,10 @@ const StatusPlayer = props => {
         onValueChange={value => setSlider(value)}
       />
       <ScrollView>
-        <Text>Stats</Text>
-        <Text>Stats</Text>
-        <Text>Stats</Text>
-        <Text>Stats</Text>
-        <Text>Stats</Text>
+        <Text>el dado dio {props.dices && props.dices.value} </Text>
       </ScrollView>
       <Text>Throw the Dice!</Text>
-      <Button title="Throw" />
+      <Button onPress={props.throwDicespending} title="Throw" />
     </View>
   )
 }
@@ -29,5 +28,10 @@ StatusPlayer.defaultProps = {
   playerName: 'PLACEHOLDER',
 }
 
-export default StatusPlayer
+
+const dispatchtoprops = dispatch => ({ 
+    throwDicespending: () => throwDices(dispatch),
+  });
+
+export default connect(store => ({ dices: store.dashboard.dice,}), dispatchtoprops)(StatusPlayer);
 

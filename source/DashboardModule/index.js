@@ -1,13 +1,13 @@
 import React from 'react'
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
-import StatusPlayer from './StatusPlayer/StatusPlayer';
 import { Button } from 'react-native-elements';
+import { throwDices } from './redux/actions';
 
 const Dashboard = props => {
   const goToStatus = () => {
       // llamo a la accion
-      props.actionFetch();
+      props.throwDices();
       props.navigation.navigate('statusPlayer');
     }
   return (
@@ -18,18 +18,8 @@ const Dashboard = props => {
   )
 }
 
-const action = async (dispatch) => {
-  let data = await fetch('http://roll.diceapi.com/json/d6', { contentType:'application/json'});
-  data = await data.json(); 
-  console.log(dispatch, data);
-  dispatch ({
-      type:'fetch', 
-      data         
-    });
-}
-
 const dispatchtoprops = dispatch => ({ 
-    actionFetch: () => action(dispatch),
+    throwDices: () => throwDices(dispatch),
   });
 
 export default connect(()=>({}), dispatchtoprops)(Dashboard)

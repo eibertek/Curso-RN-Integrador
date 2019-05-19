@@ -4,6 +4,8 @@ import { persistStore, persistReducer } from 'redux-persist';
 import thunk from 'redux-thunk';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import loginReducer from '../LoginModule/redux/reducers';
+import dashboardReducer from '../DashboardModule/redux/reducers';
+
 
 const casaReducer = (state={ casa:''}, action) => {
   if(action.type==='CASA') return { ...state, casa:"AAAAAAAA" };
@@ -12,6 +14,7 @@ const casaReducer = (state={ casa:''}, action) => {
 const rootReducer = combineReducers({
     login: loginReducer,
     casa: casaReducer,
+    dashboard: dashboardReducer,
   });
 
   const customMiddleware = store => (next, ...otherparams) => action => {
