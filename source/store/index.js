@@ -22,7 +22,7 @@ const rootReducer = combineReducers({
     // action es la variable qué tiene el objecto enviado desde el action ( { type, data} )
    // next es la funcion qué hara qué el middleware prosiga con su flujo ( sino llamamos a este metodo el action nunca ira al reducer)
    // store es el store ( :P ) por ende desde aca tenemos acceso al getState o al dispatch.  
-   console.log('intervine', action);
+  // console.log('intervine', action);
     next(action);
    }
 

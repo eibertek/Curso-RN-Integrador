@@ -1,4 +1,4 @@
-package com.ex5integratorio;
+package com.eibertek.etkIntegrador;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "ex5Integratorio";
+        return "com.eibertek.etkIntegrador";
     }
 
     @Override

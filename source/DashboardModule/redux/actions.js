@@ -22,7 +22,6 @@ export const throwDicesFailed = error => {
 };
 
 export const throwDices = async (dispatch) => {
-    console.log('di[paastch', dispatch);
     dispatch(throwDicesPending());
     try{
       let data = await axios.get('http://roll.diceapi.com/json/d6');
