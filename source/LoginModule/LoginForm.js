@@ -7,6 +7,7 @@ import OrDivider from './img/orDivider.png';
 import GoogleSignIn from './img/googleSignIn.png';
 import FacebookSignIn from './img/facebookSignIn.png';
 import { styles } from './styles';
+import GoogleLoginButton from './GoogleSignIn';
 
 export const LoginForm = props => {
     return (
@@ -33,7 +34,7 @@ export const LoginForm = props => {
             />          
          </View>
          <Image source={OrDivider} style={{position: 'absolute', marginTop:420, marginLeft:30, width:270}}></Image>
-         <Image source={GoogleSignIn} style={{position: 'absolute', marginTop:450, marginLeft:90 }}></Image>
+         <GoogleLoginButton />
          <Image source={FacebookSignIn} style={{position: 'absolute', marginTop:450, marginLeft:170 }}></Image>
         </View>
     );

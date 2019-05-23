@@ -36,7 +36,8 @@ public class MainApplication extends Application implements ReactApplication {
             new AsyncStoragePackage(),
             new SvgPackage(),
             new RNFirebaseAuthPackage(),
-             new RNFirebaseFirestorePackage() 
+            new RNFirebaseFirestorePackage(),
+            new GooglePackage()
       );
     }
 
