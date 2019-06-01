@@ -14,7 +14,7 @@ export default class News extends React.Component {
     try {
       
     
-   fetch('https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=189a443163814db28eb186f42d331901')
+   fetch('https://newsapi.org/v2/top-headlines?country=ar&pageSize=25&apiKey=189a443163814db28eb186f42d331901')
       .then((response) => response.json())
       .then((responseJson) => {
 
@@ -48,7 +48,7 @@ export default class News extends React.Component {
       )
     }
       // console.log(this.state);
-      {this.state.dataSource.map(item => console.log(item.title))}
+    
       
     return(
         <ScrollView>
