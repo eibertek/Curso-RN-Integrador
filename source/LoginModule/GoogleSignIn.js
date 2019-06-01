@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {View,Text,StyleSheet,NativeModules,TouchableHighlight,Image, } from 'react-native';
+import GoogleSignIn from './img/googleSignIn.png';
 
 const GoogleUtil = NativeModules.GoogleUtil;
 
@@ -60,13 +61,7 @@ export default class GoogleLoginButton extends Component {
         const text = this.state.text;
         return (
           <TouchableHighlight onPress={this.onLogin}  >
-            {(this.state.status == false) ? 
               <Image source={GoogleSignIn}  />
-              : <View style={[styles.button]}>
-              <Image source={GoogleSignIn}  />
-                  <Text style={[styles.black]}>{text}</Text>
-                </View>
-              }   
           </TouchableHighlight>
         )
       }
@@ -78,9 +73,11 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       height: 45,
-      backgroundColor: 'white',
     },
-    blakText: {
-      color: 'black'
+    opaque: {
+      padding: 10,
+     flexDirection: 'row',
+      alignItems: 'center',
+      height: 45,
     }
   });

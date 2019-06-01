@@ -34,7 +34,9 @@ export const LoginForm = props => {
             />          
          </View>
          <Image source={OrDivider} style={{position: 'absolute', marginTop:420, marginLeft:30, width:270}}></Image>
-         <GoogleLoginButton />
+         <View style={{position: 'absolute', marginTop:450, marginLeft:50 }}>
+            <GoogleLoginButton />
+         </View>
          <Image source={FacebookSignIn} style={{position: 'absolute', marginTop:450, marginLeft:170 }}></Image>
         </View>
     );
