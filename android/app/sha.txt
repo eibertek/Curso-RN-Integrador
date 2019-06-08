@@ -1,0 +1,50 @@
+9:21:30 PM: Executing task 'signingReport'...
+
+Executing tasks: [signingReport]
+
+
+> Configure project :app
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+
+> Configure project :react-native-firebase
+react-native-firebase: using React Native prebuilt binary from C:\Users\Mariano Eiberman\Documents\Projects\2019\ex5Integratorio\node_modules\react-native\android
+
+> Task :app:signingReport
+Variant: debugUnitTest
+Config: debug
+Store: C:\Users\Mariano Eiberman\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: AB:E4:F1:99:23:EB:40:0A:DF:BE:7F:49:D9:97:21:A4
+SHA1: 79:42:F7:E1:1F:13:D9:89:4C:43:4B:DF:D9:1F:D7:A7:C0:08:01:9F
+SHA-256: 85:87:EB:2A:45:D2:50:19:3C:E6:F3:89:2F:38:CC:5D:1D:9B:02:4B:EC:A4:1F:D4:6B:64:C1:31:46:66:89:37
+Valid until: Tuesday, March 16, 2049
+----------
+Variant: releaseUnitTest
+Config: none
+----------
+Variant: debug
+Config: debug
+Store: C:\Users\Mariano Eiberman\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: AB:E4:F1:99:23:EB:40:0A:DF:BE:7F:49:D9:97:21:A4
+SHA1: 79:42:F7:E1:1F:13:D9:89:4C:43:4B:DF:D9:1F:D7:A7:C0:08:01:9F
+SHA-256: 85:87:EB:2A:45:D2:50:19:3C:E6:F3:89:2F:38:CC:5D:1D:9B:02:4B:EC:A4:1F:D4:6B:64:C1:31:46:66:89:37
+Valid until: Tuesday, March 16, 2049
+----------
+Variant: release
+Config: none
+----------
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\Mariano Eiberman\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: AB:E4:F1:99:23:EB:40:0A:DF:BE:7F:49:D9:97:21:A4
+SHA1: 79:42:F7:E1:1F:13:D9:89:4C:43:4B:DF:D9:1F:D7:A7:C0:08:01:9F
+SHA-256: 85:87:EB:2A:45:D2:50:19:3C:E6:F3:89:2F:38:CC:5D:1D:9B:02:4B:EC:A4:1F:D4:6B:64:C1:31:46:66:89:37
+Valid until: Tuesday, March 16, 2049
+----------
+
+BUILD SUCCESSFUL in 20s
+1 actionable task: 1 executed
+9:21:52 PM: Task execution finished 'signingReport'.

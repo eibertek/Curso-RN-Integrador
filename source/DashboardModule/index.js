@@ -8,12 +8,13 @@ const Dashboard = props => {
   const goToStatus = () => {
       // llamo a la accion
       props.throwDices();
-      props.navigation.navigate('statusPlayer');
+      props.navigation.navigate('StatusPlayer');
     }
   return (
     <View>
       <Text>Dashboard</Text>
       <Button title="GO to status player" onPress={goToStatus} />
+      <Button title="Log out" onPress={() => props.navigation.navigate('login')} />
     </View>
   )
 }

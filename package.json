@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "android": "react-native run-android"
+    "android": "react-native run-android",
+    "build:gradle":"./gradlew :ReactAndroid:installArchives --no-daemon"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",

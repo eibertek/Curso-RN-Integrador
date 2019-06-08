@@ -41,9 +41,9 @@ const configureStore = () => {
 };
 */
   const middlewares = compose(
+    applyMiddleware(thunk),    
     window.__REDUX_DEVTOOLS_EXTENSION__ ?
     window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
-    applyMiddleware(thunk),    
     applyMiddleware(customMiddleware),    
   ); 
 
@@ -61,4 +61,4 @@ export const store = createStore(pReducer,
     )
 
 export const persistor = persistStore(store);
-// persistor.purge();
+persistor.purge();

@@ -1,14 +1,14 @@
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator, createSwitchNavigator, createAppContainer } from "react-navigation";
 import Dashboard from "./DashboardModule";
 import StatusPlayer from "./DashboardModule/StatusPlayer/StatusPlayer";
-// import { ConnectedForm as LoginModule, SignUpForm } from "./LoginModule";
+import { ConnectedForm as LoginModule, SignUpForm } from "./LoginModule";
 
 
-const AppNavigator = createStackNavigator({
-    dashboard: Dashboard,
-    statusPlayer: StatusPlayer,
+const AppNavigator = createSwitchNavigator({
+    dashboard: createStackNavigator({ Dashboard, StatusPlayer }),
+    login: createStackNavigator({ LoginModule, })
 }, {
-        initialRouteName: "dashboard"
+        initialRouteName: "login"
     });
 
 export default createAppContainer(AppNavigator);
