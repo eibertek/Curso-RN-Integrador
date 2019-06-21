@@ -33,7 +33,6 @@ export default (state = initState, action) => {
                     isLogginIn: action.isLogginIn,
                 }            
         case LOGIN_USER_SUCCESS:
-            console.log('reducer', action);
             return {
                 ...state,
                 isLogginIn: action.isLogginIn,

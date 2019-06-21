@@ -20,6 +20,11 @@ export const LoginForm = props => {
             return null; 
         }    
     },[]);
+
+    gotoView = (src) => {
+        this.props.navigate('webview', { src,});
+    }
+
     return (
         <View>
             <ImageBackground  
